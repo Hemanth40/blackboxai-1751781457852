@@ -1,0 +1,55 @@
+/* ChatGPT-like chat bubble style for summary result */
+.summaryContainer {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 600px;
+  overflow-y: auto;
+  font-family: 'Inter', sans-serif;
+  color: #111827; /* Tailwind gray-900 */
+  line-height: 1.6;
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.bubble {
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.bubble.bullet ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.bubble.bullet ul li {
+  margin-bottom: 0.75rem;
+}
+
+.bubble.paragraph p {
+  margin-bottom: 1rem;
+}
+
+.bubble.detailed p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #374151; /* Tailwind gray-700 */
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
